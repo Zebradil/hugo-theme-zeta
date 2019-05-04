@@ -1,0 +1,6 @@
+{{ $width := .Get 0 | float }}
+{{ $height := .Get 1 | float }}
+<div class="responsive-block box"
+     style="padding-bottom: {{ div $height $width | mul 100 }}%">
+    {{ .Inner }}
+</div>

@@ -1,0 +1,17 @@
+{{- if not (in "jquery" ($.Page.Scratch.Get "js")) -}}
+    {{- $.Page.Scratch.SetInMap "js" "0jquery" "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" -}}
+{{- end -}}
+
+{{- if not (in "fotorama" ($.Page.Scratch.Get "js")) -}}
+    {{- $.Page.Scratch.SetInMap "js" "fotorama" "https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.js" -}}
+    {{- $.Page.Scratch.SetInMap "css" "fotorama" "https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.css" -}}
+{{- end -}}
+
+<div class="box fotorama"
+     data-width="{{ .Get "width" | default "100%" }}"
+     data-ratio="{{ .Get "ratio" | default "800/600" }}"
+     data-maxheight="{{ .Get "maxheight" | default "100%" }}"
+     data-navposition="{{ .Get "navposition" | default "top" }}"
+     data-nav="{{ .Get "nav" | default "thumbs" }}">
+    {{ .Inner }}
+</div>

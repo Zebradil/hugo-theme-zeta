@@ -1,0 +1,20 @@
+<article class="post">
+  <header class="post-header">
+      {{ partial "post/header.html" . }}
+  </header>
+  <!-- Content -->
+  <div class="post-content">
+    {{ if .Site.Params.homeFullContent }}
+      <div class="post-summary">
+        {{ .Content }}
+      </div>
+    {{ else }}
+      <div class="post-summary">
+        {{ .Summary }}
+      </div>
+      <p class="read-more">
+        <a href="{{ .URL }}" class="read-more-link">{{ i18n "readmore" }}</a>
+      </p>
+    {{ end }}
+  </div>
+</article>

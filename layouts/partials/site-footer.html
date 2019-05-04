@@ -1,0 +1,39 @@
+<footer>
+    <div class="social-links">
+        {{ $socials := .Site.Params.social }}
+        {{- range $name := .Site.Params.footer.social }}
+        {{ $item := index $socials $name }}
+        <a href="{{ $item.link | safeURL }}"
+           rel="me noopener"
+           class="social-link"
+           title="{{ $item.name }}"
+           target="_blank"
+           style="-webkit-mask-image: url({{ $item.icon }}); mask-image: url({{ $item.icon }})">
+        </a>
+        {{- end }}
+        <a href="{{ .Site.RSSLink }}"
+           rel="noopener"
+           type="application/rss+xml"
+           class="social-link rss-icon"
+           title="RSS"
+           target="_blank">
+        </a>
+    </div>
+
+    <div class="copyright">
+        {{- $current := now.Format "2006" }}
+        &copy;
+        {{- if or .Site.Copyright .Site.Author.name -}}
+            <span class="author"> {{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}, </span>
+        {{- end -}}
+        {{ if ne .Site.Params.since $current }}
+            {{ .Site.Params.since }} -
+        {{ end }}
+        {{- $current }}
+    </div>
+    <div class="credits">
+        Powered by <a href="https://gohugo.io">Hugo</a>
+        <br/>
+        Theme - <a href="https://github.com/zebradil/hugo-theme-zeta">Zeta</a>
+    </div>
+</footer>

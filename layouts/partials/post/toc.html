@@ -1,0 +1,7 @@
+{{ if or .Params.toc (and .Site.Params.toc (ne .Params.toc false)) }}
+<div class="post-toc" id="post-toc">
+  <div class="post-toc-content">
+    {{.TableOfContents}}
+  </div>
+</div>
+{{- end }}
