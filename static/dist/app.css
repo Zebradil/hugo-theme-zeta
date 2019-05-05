@@ -699,3 +699,6 @@ footer .credits {
 #error-emoji {
   font-size: 4em; }
 
+#comments {
+  max-width: 720px; }
+
