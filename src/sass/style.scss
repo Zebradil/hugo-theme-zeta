@@ -1,6 +1,8 @@
 @import "normalize";
 @import "_chroma_highlight";
 
+$break-small: 450px;
+
 $linkColor: hsl(205, 100%, 45%);
 $visitedLinkColor: hsl(205, 50%, 70%);
 $hoverColor: #e07700;
@@ -45,6 +47,10 @@ nav[role="navigation"] {
     text-decoration: none;
     font-size: 3em;
     @include link-color(#333);
+
+    @media screen and (max-width: $break-small) {
+      font-size: 10vw;
+    }
   }
 }
 
@@ -64,6 +70,7 @@ nav[role="navigation"] {
 
   li {
     display: inline-block;
+    margin: 0.3em 0;
   }
 }
 

@@ -514,6 +514,9 @@ nav[role="navigation"] {
     nav[role="navigation"] .logo:hover {
       color: #e07700;
       cursor: pointer; }
+    @media screen and (max-width: 450px) {
+      nav[role="navigation"] .logo {
+        font-size: 10vw; } }
 
 .alt-lang-link {
   white-space: nowrap; }
@@ -527,7 +530,8 @@ nav[role="navigation"] {
   list-style: none;
   padding: 0; }
   #menu li {
-    display: inline-block; }
+    display: inline-block;
+    margin: 0.3em 0; }
 
 .menu-item-link {
   text-decoration: none;
