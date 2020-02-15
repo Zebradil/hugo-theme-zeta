@@ -53,12 +53,12 @@
 
       <!-- First page. -->
       {{ if ne $pag.PageNumber 1 }}
-      <li><a href="{{ $pag.First.URL }}">««</a></li>
+      <li><a href="{{ $pag.First.RelPermalink }}">««</a></li>
       {{ end }}
 
       <!-- Previous page. -->
       {{ if $pag.HasPrev }}
-      <li><a href="{{ $pag.Prev.URL }}">«</a></li>
+      <li><a href="{{ $pag.Prev.RelPermalink }}">«</a></li>
       {{ end }}
 
       <!-- Page numbers. -->
@@ -106,7 +106,7 @@
         <!-- Output page numbers. -->
         {{ if eq ($.Scratch.Get "page_number_flag") true }}
           <li class="{{ if eq . $pag }}active{{ end }}">
-            <a href="{{ .URL }}">
+            <a href="{{ .RelPermalink }}">
               {{ .PageNumber }}
             </a>
           </li>
@@ -116,12 +116,12 @@
 
       <!-- Next page. -->
       {{ if $pag.HasNext }}
-      <li><a href="{{ $pag.Next.URL }}">»</a></li>
+      <li><a href="{{ $pag.Next.RelPermalink }}">»</a></li>
       {{ end }}
 
       <!-- Last page. -->
       {{ if ne $pag.PageNumber $pag.TotalPages }}
-      <li><a href="{{ $pag.Last.URL }}">»»</a></li>
+      <li><a href="{{ $pag.Last.RelPermalink }}">»»</a></li>
       {{ end }}
 
       </ul>

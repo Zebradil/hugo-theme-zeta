@@ -6,7 +6,7 @@
   {{- if not $paginator.HasPrev }}
     <div class="archive-title">
       <span class="archive-post-counter">
-        {{- $length := len .Data.Pages }}
+        {{- $length := len .Site.RegularPages }}
           {{ i18n "counter_archives" $length }}
       </span>
     </div>
@@ -26,7 +26,7 @@
         {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
       </span>
       <span class="archive-post-title">
-        <a href="{{ $element.URL }}" class="archive-post-link">
+        <a href="{{ $element.RelPermalink }}" class="archive-post-link">
           {{ .Title }}
         </a>
       </span>

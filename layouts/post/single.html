@@ -25,12 +25,12 @@
     <!-- Post Pagination -->
     <nav class="post-nav two-sides">
       {{ with .NextInSection }}
-      <a class="prev" href="{{ .URL }}">
+      <a class="prev" href="{{ .RelPermalink }}">
         <span class="prev-text nav-default">{{ .Title }}</span>
       </a>
       {{- end }}
       {{ with .PrevInSection }}
-      <a class="next" href="{{ .URL }}">
+      <a class="next" href="{{ .RelPermalink }}">
         <span class="next-text nav-default">{{ .Title }}</span>
       </a>
       {{- end }}
