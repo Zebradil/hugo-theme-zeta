@@ -33,6 +33,6 @@
     "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.30.0",
     "webpack-merge": "^4.2.1",
-    "webpack-nano": "^0.6.1"
+    "webpack-nano": "^0.8.0"
   }
 }
