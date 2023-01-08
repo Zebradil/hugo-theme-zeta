@@ -21,7 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
-    "autoprefixer": "^9.5.1",
+    "autoprefixer": "^10.0.0",
     "babel-loader": "^9.0.0",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.12.0",
