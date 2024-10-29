@@ -1,5 +1,9 @@
 {{ if and .IsPage (ne .Params.comment false) }}
 
+{{- if .Site.Params.CommentsHTML -}}
+{{ .Site.Params.CommentsHTML | safeHTML }}
+{{- end }}
+
 {{- if .Site.Params.CommentoUrl -}}
 <div id="comments">
   <div id="commento"></div>
